@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet"  href="./style/reset.css" >
+    <link rel="stylesheet" href="./style/loader.css">
+    <link rel="stylesheet"  href="./style/style.css" >
     <title>StarsWars</title>
 </head>
 <body>
@@ -13,65 +14,80 @@
             <img src="./img/star_wars_logo_PNG5.png" alt="">
         </div>
         <div class="choose-file">
-            <form action="">
-                Film №
-                <input type="text" />
-            </form>
-            <button class="btn">
-                take information
-            </button>
+            <select name="films" id="films">
+                <option selected disabled hidden value="0">Выберите фильм</option>
+                <option value="4">Звёздные войны. Эпизод I: Скрытая угроза</option>
+                <option value="5">Звёздные войны. Эпизод II: Атака клонов</option>
+                <option value="6">Звёздные войны. Эпизод III: Месть ситхов</option>
+                <option value="1">Звёздные войны. Эпизод IV: Новая надежда</option>
+                <option value="2">Звёздные войны. Эпизод V: Империя наносит ответный удар</option>
+                <option value="3">Звёздные войны. Эпизод VI: Возвращение джедая</option>
+                <option value="7">Звёздные войны: Пробуждение силы</option>
+            </select>
+            <input type="button" value="Get" id="getFilm">
         </div>
         <section class="about-film">
-            <div class="film-name">
-                <h2>Фильм Звездные войны: Эпизод 1 – Скрытая угроза</h2>
+            <div class="loader active" id="loader">
+                <div class="l_main">
+                    <div class="l_square"><span></span><span></span><span></span></div>
+                    <div class="l_square"><span></span><span></span><span></span></div>
+                    <div class="l_square"><span></span><span></span><span></span></div>
+                    <div class="l_square"><span></span><span></span><span></span></div>
+                </div>
             </div>
-            <div class="img-film">
-                <img src="./img/The_Phantom_Menace.jpg" alt="">
-            </div>
-            <div class="heroes">
-                <div class="hero">
-                    <div class="hero__avatar">
-                        <img src="./img/C3PO.png" alt="">
-                    </div>
-                    <ul>
-                        <li>Name: C3PO</li>
-                        <li>Height: 1.8m</li>
-                        <li>Gender: none</li>
-                    </ul>
+            <div class="film__inner" id="filmPage">
+                <div class="film-name">
+                    <h2>Фильм Звездные войны: Эпизод <span id="idFilm"></span> – <span id="nameFilm"></span></h2>
                 </div>
-                <div class="hero">
-                    <div class="hero__avatar">
-                        <img src="./img/Dart.png" alt="">
-                    </div>
-                    <ul>
-                        <li>Name: C3PO</li>
-                        <li>Height: 1.8m</li>
-                        <li>Gender: none</li>
-                    </ul>
+                <div class="img-film">
+                    <img src="./img/The_Phantom_Menace.jpg" alt="">
                 </div>
-                <div class="hero">
-                    <div class="hero__avatar">
-                        <img src="./img/Leia.png" alt="">
+                <div class="heroes">
+                    <div class="hero">
+                        <div class="hero__avatar">
+                            <img src="./img/C3PO.png" alt="">
+                        </div>
+                        <ul>
+                            <li>Name: C3PO</li>
+                            <li>Height: 1.8m</li>
+                            <li>Gender: none</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li>Name: C3PO</li>
-                        <li>Height: 1.8m</li>
-                        <li>Gender: none</li>
-                    </ul>
-                </div>
-                <div class="hero">
-                    <div class="hero__avatar">
-                        <img src="./img/R2D2.png" alt="">
+                    <div class="hero">
+                        <div class="hero__avatar">
+                            <img src="./img/Dart.png" alt="">
+                        </div>
+                        <ul>
+                            <li>Name: C3PO</li>
+                            <li>Height: 1.8m</li>
+                            <li>Gender: none</li>
+                        </ul>
                     </div>
-                    <ul>
-                        <li>Name: C3PO</li>
-                        <li>Height: 1.8m</li>
-                        <li>Gender: none</li>
-                    </ul>
+                    <div class="hero">
+                        <div class="hero__avatar">
+                            <img src="./img/Leia.png" alt="">
+                        </div>
+                        <ul>
+                            <li>Name: C3PO</li>
+                            <li>Height: 1.8m</li>
+                            <li>Gender: none</li>
+                        </ul>
+                    </div>
+                    <div class="hero">
+                        <div class="hero__avatar">
+                            <img src="./img/R2D2.png" alt="">
+                        </div>
+                        <ul>
+                            <li>Name: C3PO</li>
+                            <li>Height: 1.8m</li>
+                            <li>Gender: none</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="./script/main.js"></script>
 </body>
 </html>

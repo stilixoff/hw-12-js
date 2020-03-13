@@ -1,0 +1,35 @@
+body {
+    background-color: #1A143B;
+    color: white;
+}
+
+
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo img{
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.film-name, .img-film, .logo {
+    text-align: center;
+}
+
+.img-film img {
+    width: 10%;
+}
+
+.heroes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

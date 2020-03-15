@@ -1,5 +1,6 @@
 let getNameFilm = document.getElementById('getFilm');
-console.log(document.getElementById('films').value);
+
+
 
 
 
@@ -14,19 +15,22 @@ console.log(document.getElementById('films').value);
                 document.getElementById('idFilm').innerHTML = `${res.data.episode_id}`;
                 document.getElementById('nameFilm').innerHTML = `${res.data.title}`;
                 console.log(res);
-                for (let index = 1; index < res.data.characters[index].length; index++) {
-                    axios.get(`https://swapi.co/api/people/${index}/`)
-                        .then((res) => {
-                            console.log(res.data);
-                        });
+                return res;
+            }).then((res) => {
+                for (let index = 0; index < res.data.characters.length; index++) {
+                    axios.get(res.data.characters[index])
+                    .then((res) => {
+                        console.log(res.data.name);
+                    })
+                    
                 }
+                console.log(res);
             }).finally(() => {
                 // document.getElementById('filmPage').classList.toggle('active');
                 document.getElementById('loader').classList.toggle('active');
             });
         }
     }
-
 
 // getNameFilm.onclick = function(){
 //     // document.getElementById('filmPage').classList.toggle('active');
@@ -48,7 +52,7 @@ console.log(document.getElementById('films').value);
 // }
 
 
-// axios.get(`https://swapi.co/api/people/17/`)
-//                         .then((res) => {
-//                             console.log(res.data);
-//                         });
+axios.get(`https://swapi.co/api/people/2/`)
+                        .then((res) => {
+                            console.log(res.data);
+                        });

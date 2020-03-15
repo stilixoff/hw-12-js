@@ -52,7 +52,7 @@ let getNameFilm = document.getElementById('getFilm');
 // }
 
 
-axios.get(`https://swapi.co/api/people/2/`)
-                        .then((res) => {
-                            console.log(res.data);
-                        });
+// axios.get(`https://swapi.co/api/people/2/`)
+//                         .then((res) => {
+//                             console.log(res.data);
+//                         });

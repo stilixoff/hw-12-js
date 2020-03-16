@@ -19,7 +19,8 @@ let getNameFilm = document.getElementById('getFilm');
                 document.getElementById('idFilm').innerHTML = `${res.data.episode_id}`;
                 document.getElementById('nameFilm').innerHTML = `${res.data.title}`;
                 document.getElementById('filmInfo').innerHTML = `${res.data.opening_crawl}`;
-                document.getElementById('imgFilm').innerHTML = `<img src="./img/${res.data.title}.jpg" alt="${res.data.title}">`;
+                document.getElementById('imgFilm').innerHTML = `<img src="./img/filmsImg/${res.data.title}.jpg" alt="${res.data.title}">`;
+                document.getElementById('planets').setAttribute('href', `./planet.html?planets=${res.data.episode_id}`);
                 console.log(res);
                 return res;
             }).then((res) => {
@@ -32,7 +33,7 @@ let getNameFilm = document.getElementById('getFilm');
                         heroes.innerHTML += `
                         <div class="hero">
                         <div class="hero__avatar">
-                            <img src="./img/${res.data.name}.png" alt="">
+                            <img src="./img/heroes/${res.data.name}.png" alt="planet">
                         </div>
                         <ul class="hero__info">
                             <li>Name: ${res.data.name}</li>
@@ -54,5 +55,5 @@ let getNameFilm = document.getElementById('getFilm');
                 document.getElementById('filmPage').classList.remove('active');
                 document.getElementById('loader').classList.toggle('active');
             });
-}
+        }
     }

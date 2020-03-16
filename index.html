@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="./style/reset.css" >
     <link rel="stylesheet" href="./style/loader.css">
     <link rel="stylesheet"  href="./style/style.css" >
@@ -13,8 +14,8 @@
         <div class="logo">
             <img src="./img/star_wars_logo_PNG5.png" alt="">
         </div>
-        <div class="choose-file">
-            <select name="films" id="films">
+        <div class="select-outer">
+            <select name="select" id="films" class="select">
                 <option selected disabled hidden value="0">Выберите фильм</option>
                 <option value="4">Звёздные войны. Эпизод I: Скрытая угроза</option>
                 <option value="5">Звёздные войны. Эпизод II: Атака клонов</option>
@@ -24,7 +25,8 @@
                 <option value="3">Звёздные войны. Эпизод VI: Возвращение джедая</option>
                 <option value="7">Звёздные войны Эпизод VII: Пробуждение силы</option>
             </select>
-            <input type="button" value="Get" id="getFilm">
+            <button id="getFilm">получить информацию</button>
+            <!-- <input type="button" value="Get" id="getFilm" class="select-button"> -->
         </div>
         <section class="about-film">
             <div class="loader active" id="loader">
@@ -39,50 +41,20 @@
                 <div class="film-name">
                     <h2>Фильм Звездные войны: Эпизод <span id="idFilm"></span> – <span id="nameFilm"></span></h2>
                 </div>
-                <div class="img-film">
-                    <img src="./img/The_Phantom_Menace.jpg" alt="">
+                <div class="img-film" id="imgFilm">
+                </div>
+                <div class="about-film">
+                    <p id="filmInfo">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi consequatur labore quas animi asperiores laborum culpa incidunt quod, cumque ut delectus! Magni aut obcaecati minus dignissimos corporis tenetur repellat?
+                    </p>
+                    <button class="getFilm">
+                        <a href="./planet.html">Планеты из фильма</a>
+                    </button>
+                </div>
+                <div class="characters">
+                    Персонажи фильма
                 </div>
                 <div class="heroes" id="heroes">
-                    <!-- <div class="hero" id="hero">
-                        <div class="hero__avatar">
-                            <img src="./img/C3PO.png" alt="">
-                        </div>
-                        <ul class="hero__info">
-                            <li>Name: C3PO</li>
-                            <li>Height: 1.8m</li>
-                            <li>Gender: none</li>
-                        </ul>
-                    </div>
-                    <div class="hero">
-                        <div class="hero__avatar">
-                            <img src="./img/Dart.png" alt="">
-                        </div>
-                        <ul class="hero__info">
-                            <li>Name: C3PO</li>
-                            <li>Height: 1.8m</li>
-                            <li>Gender: none</li>
-                        </ul>
-                    </div>
-                    <div class="hero">
-                        <div class="hero__avatar">
-                            <img src="./img/Leia.png" alt="">
-                        </div>
-                        <ul class="hero__info">
-                            <li>Name: C3PO</li>
-                            <li>Height: 1.8m</li>
-                            <li>Gender: none</li>
-                        </ul>
-                    </div>
-                    <div class="hero">
-                        <div class="hero__avatar">
-                            <img src="./img/R2D2.png" alt="">
-                        </div>
-                        <ul class="hero__info">
-                            <li>Name: C3PO</li>
-                            <li>Height: 1.8m</li>
-                            <li>Gender: none</li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </section>

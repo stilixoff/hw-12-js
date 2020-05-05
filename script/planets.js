@@ -1,7 +1,7 @@
 window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const planets = urlParams.get('planets');
-    axios.get(`https://swapi.co/api/films/${planets}`)
+    axios.get(`https://swapi.dev/api/films/${planets}`)
         .then((res) => {
             let planetsAll = document.getElementById('planetsAll');
             let promiseArr = [];

@@ -14,7 +14,7 @@ let getNameFilm = document.getElementById('getFilm');
             document.getElementById('filmPage').classList.add('active');
             document.getElementById('loader').classList.toggle('active');
             let idFilm = document.getElementById('films').value;
-            axios.get(`https://swapi.co/api/films/${idFilm}`)
+            axios.get(`https://swapi.dev/api/films/${idFilm}`)
             .then((res) => {
                 document.getElementById('idFilm').innerHTML = `${res.data.episode_id}`;
                 document.getElementById('nameFilm').innerHTML = `${res.data.title}`;
